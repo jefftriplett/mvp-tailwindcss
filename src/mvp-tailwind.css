@@ -1,0 +1,364 @@
+@tailwind base;
+
+@tailwind components;
+
+/* MVP.css v1.5 - https://github.com/andybrewer/mvp */
+
+:root {
+  --box-shadow: 2px 2px 10px;
+  --color-accent: theme('colors.blue.600')0b;
+  --color-bg-secondary: theme('colors.gray.200');
+  --color-secondary: theme('colors.purple.600');
+  --color-secondary-accent: theme('colors.purple.600')0b;
+  --color-shadow: theme('colors.gray.100');
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --hover-brightness: 1.2;
+  /*--justify-normal: left;*/
+}
+
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color: #0097fc;
+    --color-accent: #0097fc4f;
+    --color-bg: #333;
+    --color-bg-secondary: #555;
+    --color-secondary: #e20de9;
+    --color-secondary-accent: #e20de94f;
+    --color-shadow: #bbbbbb20;
+    --color-text: #f7f7f7;
+    --color-text-secondary: #aaa;
+  }
+}
+*/
+
+/* Layout */
+article aside {
+  @apply px-3 py-1 bg-purple-100 border-l-4 border-purple-600;
+  background: var(--color-secondary-accent); /* TODO */
+  border-left: 4px solid var(--color-secondary);
+}
+
+body {
+  @apply p-1 m-0 overflow-x-hidden font-sans leading-normal text-black bg-white;
+  /*font-family: var(--font);  it's almost font-sans*/
+}
+
+footer,
+header,
+main {
+  @apply content-center max-w-5xl px-4 py-8 mx-auto my-0;
+}
+
+hr {
+  @apply mx-0 my-16 bg-gray-100 border;
+}
+
+section {
+  @apply flex flex-wrap justify-center;
+  /*justify-content: var(--justify-important); TODO*/
+}
+
+section aside {
+  @apply w-64 max-w-sm p-6 m-4 border border-gray-300 border-solid rounded-lg shadow-md;
+  /*box-shadow: var(--box-shadow) var(--color-shadow); TODO*/
+}
+
+section aside:hover {
+  @apply shadow-lg;
+  /*box-shadow: var(--box-shadow) var(--color-bg-secondary); TODO*/
+}
+
+section aside img {
+  @apply max-w-full;
+}
+
+section header h2,
+section aside h3 {
+  @apply font-extrabold;
+}
+
+/* Headers */
+article header,
+div header,
+main header {
+  @apply pt-0;
+}
+
+header {
+  @apply text-center;
+  /*text-align: var(--justify-important);*/
+}
+
+header a b,
+header a em,
+header a i,
+header a strong {
+  @apply ml-2 mr-2;
+}
+
+header nav img {
+  @apply px-0 my-4;
+}
+
+section header {
+  @apply w-full pt-0;
+}
+
+/* Nav */
+nav {
+  @apply flex items-center justify-between mb-32 font-bold;
+}
+
+nav ul {
+  @apply p-0 list-none;
+}
+
+nav ul li {
+  @apply relative inline-block mx-2 my-0 text-left;
+}
+
+/* Nav Dropdown */
+nav ul li:hover ul {
+  @apply block;
+}
+
+nav ul li ul {
+  @apply absolute right-0 top-auto hidden w-auto h-auto px-4 py-2 bg-white border border-gray-300 border-solid rounded-md shadow-lg;
+  /*box-shadow: var(--box-shadow) var(--color-shadow); TODO*/
+}
+
+nav ul li ul li,
+nav ul li ul li a {
+  @apply block;
+}
+
+/* Typography */
+code,
+samp {
+  @apply justify-start inline-block px-2 py-0 mx-1 my-0 text-black bg-gray-100 rounded-sm;
+  background-color: var(--color-accent); /* TODO: */
+}
+
+details {
+  margin: 1.3rem 0;
+}
+
+details summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply leading-normal;
+}
+
+h1 {
+  @apply text-3xl font-extrabold;
+}
+
+h2 {
+  @apply text-2xl font-extrabold;
+}
+
+h3 {
+  @apply text-xl font-extrabold;
+}
+
+h4 {
+  @apply text-lg;
+}
+
+mark {
+  padding: 0.1rem;
+}
+
+ol li,
+ul li {
+  @apply px-0 py-1;
+}
+
+p {
+  @apply px-0 py-0 mx-0 my-3;
+}
+
+pre {
+  @apply max-w-3xl mx-0 my-4;
+  white-space: pre-line;
+}
+
+pre code,
+pre samp {
+  @apply px-8 py-4 leading-loose;
+}
+
+small {
+  @apply text-gray-600;
+}
+
+sup {
+  @apply relative px-2 py-1 mx-0 my-1 font-bold text-white bg-purple-600 rounded-lg text-xxs;
+  top: -2px;
+}
+
+/* Links */
+a {
+  @apply inline-block font-bold text-purple-600 no-underline;
+}
+
+a:hover {
+  @apply underline;
+  filter: brightness(var(--hover-brightness)); /* TODO */
+}
+
+a b,
+a em,
+a i,
+a strong,
+button {
+  @apply inline-block px-8 py-4 mx-0 my-4 text-lg font-medium leading-normal border rounded-lg;
+}
+
+button {
+  @apply font-sans;
+  /*font-family: var(--font); TODO*/
+}
+
+button:hover {
+  @apply cursor-pointer;
+  filter: brightness(var(--hover-brightness)); /* TODO */
+}
+
+a b,
+a strong,
+button {
+  @apply text-white bg-blue-600 border-2 border-blue-600;
+}
+
+a em,
+a i {
+  @apply inline-block px-8 py-4 text-blue-600 border border-2 border-blue-600 border-solid rounded-lg;
+}
+
+/* Images */
+figure {
+  @apply p-0 m-0;
+}
+
+figure img {
+  @apply max-w-full;
+}
+
+figure figcaption {
+  @apply text-gray-600;
+}
+
+/* Forms */
+
+button:disabled,
+input:disabled {
+  @apply text-gray-600 bg-gray-100 border-gray-300 cursor-not-allowed;
+}
+
+button[disabled]:hover {
+  filter: none;
+}
+
+form {
+  @apply justify-start block max-w-xl min-w-0 p-6 border border-gray-300 border-solid rounded-lg shadow-lg;
+  /*box-shadow: var(--box-shadow) var(--color-shadow); TODO*/
+}
+
+form header {
+  @apply px-0 py-6 mx-0 my-6;
+}
+
+input,
+label,
+select,
+textarea {
+  @apply block max-w-lg;
+  font-size: inherit;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  @apply inline-block;
+}
+
+input[type="checkbox"]+label,
+input[type="radio"]+label {
+  @apply relative inline-block font-normal;
+  top: 1px; /* TODO */
+}
+
+input,
+select,
+textarea {
+  @apply px-3 py-1 mb-4 border border-gray-300 border-solid rounded-lg;
+}
+
+input[readonly],
+textarea[readonly] {
+  @apply bg-gray-100;
+  background-color: var(--color-bg-secondary); /* TODO*/
+}
+
+label {
+  @apply mb-1 font-bold;
+}
+
+/* Tables */
+table {
+  @apply p-0 overflow-x-scroll overflow-y-hidden border border-gray-300 border-solid rounded-lg border-spacing-0;
+}
+
+table td,
+table th,
+table tr {
+  @apply justify-center px-3 py-1;
+}
+
+table thead {
+  @apply p-0 m-0 text-white bg-blue-600 border-collapse rounded-md;
+}
+
+table thead th:first-child {
+  @apply rounded-tl-lg;
+}
+
+table thead th:last-child {
+  @apply rounded-tr-lg;
+}
+
+table thead th:first-child,
+table tr td:first-child {
+  @apply justify-start;
+  /*text-align: var(--justify-normal); TODO*/
+}
+
+/* Quotes */
+blockquote {
+  @apply block max-w-lg px-4 py-6 mx-auto my-6 text-2xl leading-normal text-center;
+}
+
+blockquote footer {
+  @apply block px-0 py-6 text-sm leading-normal text-gray-600;
+}
+
+@tailwind utilities;
+
+/* Custom styles */
+
+.border-spacing-0 {
+  border-spacing: 0
+}
+
+.text-xxs {
+  font-size: 0.5rem;
+}
