@@ -1,5 +1,3 @@
-![MVP.css](img/logo.png)
-
 # MVP.css Reimplemented in Tailwind CSS
 
 This fork is a rebuild of MVP.css written in Tailwind CSS mostly to see how hard it'd be. This gives you a great starting point vs. having a blank unstyled document while allowing you to customize everything using TailwindCSS.
@@ -11,6 +9,8 @@ More soon, but enjoy!
 ## ** more info coming **
 
 ----
+
+![MVP.css](img/logo.png)
 
 # MVP.css — Minimalist stylesheet for HTML elements
 
