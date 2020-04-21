@@ -4,7 +4,7 @@
 
 .PHONY: build
 build:
-	@npx tailwindcss@1.3.1 build src/mvp-tailwind.css \
+	@npx tailwindcss@1.3.4 build src/mvp-tailwind.css \
 		--config src/tailwind.config.js \
 		--output dist/mvp-tailwind.css
 
